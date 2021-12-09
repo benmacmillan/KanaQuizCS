@@ -1,0 +1,98 @@
+﻿<Window x:Class="Kanaquizcs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kanaquizcs"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="327" Width="343">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition/>
+            <RowDefinition Height="107.04"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#2c3e50"
+              Panel.ZIndex="1"
+              MouseDown="Menu_MouseDown"/>
+        <Grid Background="#34495e"
+              Grid.RowSpan="3">
+
+        </Grid>
+        <!-- Menu-->
+        <TextBlock 
+                   Foreground="#27ae60" 
+            
+            Panel.ZIndex="1"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   TextWrapping="Wrap" Height="16" Width="57" Margin="10,0,0,0">Kana Quiz</TextBlock>
+        <TextBlock 
+                   Foreground="#27ae60" 
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+            Panel.ZIndex="1"
+            
+                   MouseDown="Exit_Mousedown"
+                   TextWrapping="Wrap" Height="16" HorizontalAlignment="Left" Width="7" Margin="326,0,0,0">x</TextBlock>
+
+        <!-- Kana foreground text -->
+        <TextBlock Foreground="#2ecc71"
+                   Name="Question_FG"
+                   Panel.ZIndex="1"
+                   FontSize="150"
+                   FontWeight="ExtraBold"
+                   Grid.Row="1"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap">あ</TextBlock>
+        <!-- Kana duplicate text shadow -->
+        <TextBlock Foreground="#2c3e50"
+                   Name="Question_BG"
+                   Panel.ZIndex="0"
+                   FontSize="150"
+                   FontWeight="ExtraBold"
+                   Grid.Row="1"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap" Height="200" Width="140">あ</TextBlock>
+
+        <!-- answer verify prompt -->
+        <TextBlock Foreground="#27ae60"
+                   Name="Answer_Response"
+                   FontSize="20"
+                   FontWeight="Light"
+                   Grid.Row="2"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap">Type answer to start</TextBlock>
+        <!-- Input box -->
+        <TextBox MinWidth="200"
+                 Grid.Row="2"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center"
+                 Name="answer" Height="17" Width="200"
+                 KeyDown="answer_KeyDown"></TextBox>
+        <!-- Score -->
+        <TextBlock Foreground="#27ae60"
+            x:Name="Score"
+            FontSize="10
+                   "
+            FontWeight="Light"
+            Grid.Row="2"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            TextWrapping="Wrap" Margin="0,65,0,0"><Run Text="R:0 W:0"/></TextBlock>
+    </Grid>
+</Window>
