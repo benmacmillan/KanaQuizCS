@@ -37,6 +37,27 @@
                    HorizontalAlignment="Left"
                    TextWrapping="Wrap" Height="16" Width="57" Margin="10,0,0,0">Kana Quiz</TextBlock>
         <TextBlock 
+                   Name="HiraganaToggleText"
+                   Foreground="#27ae60" 
+            
+            Panel.ZIndex="1"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   MouseDown="Hiragana_Toggle"
+                   HorizontalAlignment="Left"
+                   TextWrapping="Wrap" Height="16" Width="54" Margin="118,0,0,0">Hiragana</TextBlock>
+                   
+        <TextBlock 
+                   Foreground="#34495e" 
+            
+            Panel.ZIndex="1"
+                   Name="KatakanaToggleText"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   MouseDown="Katakana_Toggle"
+                   HorizontalAlignment="Left"
+                   TextWrapping="Wrap" Height="16" Width="53" Margin="177,0,0,0">Katakana</TextBlock>
+        <TextBlock 
                    Foreground="#27ae60" 
                    FontWeight="Bold"
                    VerticalAlignment="Center"
