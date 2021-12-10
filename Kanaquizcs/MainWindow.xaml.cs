@@ -140,6 +140,10 @@ namespace Kanaquizcs
                 Score.Text = ("R: " + Correct + " W: " + Incorrect);
                 NewQuestion();
             }
+            else if (Submited_Answer == "?")
+            {
+                NewQuestion();
+            }
             else
             {
                 Answer_Response.Text = "Incorrect!";
