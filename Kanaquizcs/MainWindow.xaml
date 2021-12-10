@@ -38,7 +38,7 @@
                    TextWrapping="Wrap" Height="16" Width="57" Margin="10,0,0,0">Kana Quiz</TextBlock>
         <TextBlock 
                    Name="HiraganaToggleText"
-                   Foreground="#27ae60" 
+                   Foreground="#2ECC71" 
             
             Panel.ZIndex="1"
                    FontWeight="Bold"

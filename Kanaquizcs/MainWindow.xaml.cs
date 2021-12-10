@@ -79,11 +79,27 @@ namespace Kanaquizcs
             {"パ","pa" },{"ピ","pi" },{"プ","pu" },{"ペ","pe" },{"ポ","po" },{"ピャ","pya" },{"ピュ","pyu" },{"ピョ","pyo" }
         };
 
-            int index = randomInstance.Next(HiraganaDict.Count);
-            KeyValuePair<string, string> pair = HiraganaDict.ElementAt(index);
-            Chosen_Answer = pair.Value ; 
-            Question_FG.Text = pair.Key;
-            Question_BG.Text = pair.Key;
+            if (EnableHiragana == true & EnableKatakana == false)
+            {
+                int index = randomInstance.Next(HiraganaDict.Count);
+                KeyValuePair<string, string> pair = HiraganaDict.ElementAt(index);
+                Chosen_Answer = pair.Value;
+                Question_FG.Text = pair.Key;
+                Question_BG.Text = pair.Key;
+            }
+            else if(EnableKatakana == true & EnableHiragana == false)
+            {
+                int index = randomInstance.Next(KatakanaDict.Count);
+                KeyValuePair<string, string> pair = KatakanaDict.ElementAt(index);
+                Chosen_Answer = pair.Value;
+                Question_FG.Text = pair.Key;
+                Question_BG.Text = pair.Key;
+            }
+            else if (EnableKatakana == true & EnableHiragana == true)
+            {
+                //figure out how to merge the dicts or take random from either here next
+            }
+            
 
         }
 
