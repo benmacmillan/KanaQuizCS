@@ -54,7 +54,7 @@
                    Grid.Row="1"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Center"
-                   TextWrapping="Wrap">あ</TextBlock>
+                   TextWrapping="Wrap" Grid.RowSpan="2">みゃ</TextBlock>
         <!-- Kana duplicate text shadow -->
         <TextBlock Foreground="#2c3e50"
                    Name="Question_BG"
@@ -64,7 +64,7 @@
                    Grid.Row="1"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Center"
-                   TextWrapping="Wrap" Height="200" Width="140">あ</TextBlock>
+                   TextWrapping="Wrap" Grid.RowSpan="2" Margin="8">みゃ</TextBlock>
 
         <!-- answer verify prompt -->
         <TextBlock Foreground="#27ae60"
