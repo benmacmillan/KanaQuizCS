@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Kanaquizcs
 {
@@ -19,7 +11,6 @@ namespace Kanaquizcs
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
-
     public partial class MainWindow : Window
     {
         public string Submited_Answer = "null";
@@ -29,16 +20,11 @@ namespace Kanaquizcs
         public bool EnableHiragana = true;
         public bool EnableKatakana = false;
         Random randomInstance = new Random();
-
-
-
-
         public MainWindow()
         {
             InitializeComponent();
             NewQuestion();
         }
-
         private void NewQuestion()
         {
             var HiraganaDict = new Dictionary<string, string>()
@@ -59,7 +45,6 @@ namespace Kanaquizcs
             {"ば","ba" },{"び","bi" },{"ぶ","bu" },{"べ","be" },{"ぼ","bo" },{"びゃ","bya" },{"びゅ","byu" },{"びょ","byo" },
             {"ぱ","pa" },{"ぴ","pi" },{"ぷ","pu" },{"ぺ","pe" },{"ぽ","po" },{"ぴゃ","pya" },{"ぴゅ","pyu" },{"ぴょ","pyo" }
         };
-
             var KatakanaDict = new Dictionary<string, string>()
         {
             {"ア","a" },{"イ","i" },{"ウ","u" },{"エ","e" },{"オ","o" },
@@ -78,7 +63,6 @@ namespace Kanaquizcs
             {"バ","ba" },{"ビ","bi" },{"ブ","bu" },{"ベ","be" },{"ボ","bo" },{"ビャ","bya" },{"ビュ","byu" },{"ビョ","byo" },
             {"パ","pa" },{"ピ","pi" },{"プ","pu" },{"ペ","pe" },{"ポ","po" },{"ピャ","pya" },{"ピュ","pyu" },{"ピョ","pyo" }
         };
-
             var DualDict = new Dictionary<string, string>()
         {
             {"あ","a" },{"い","i" },{"う","u" },{"え","e" },{"お","o" },
@@ -112,7 +96,6 @@ namespace Kanaquizcs
             {"バ","ba" },{"ビ","bi" },{"ブ","bu" },{"ベ","be" },{"ボ","bo" },{"ビャ","bya" },{"ビュ","byu" },{"ビョ","byo" },
             {"パ","pa" },{"ピ","pi" },{"プ","pu" },{"ペ","pe" },{"ポ","po" },{"ピャ","pya" },{"ピュ","pyu" },{"ピョ","pyo" }
         };
-
             if (EnableHiragana == true & EnableKatakana == false)
             {
                 int index = randomInstance.Next(HiraganaDict.Count);
@@ -137,10 +120,7 @@ namespace Kanaquizcs
                 Question_FG.Text = pair.Key;
                 Question_BG.Text = pair.Key;
             }
-            
-
         }
-
         private void Exit_Mousedown(object sender, MouseButtonEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
@@ -178,7 +158,6 @@ namespace Kanaquizcs
                     answer.Clear();
             }
         }
-
         private void Hiragana_Toggle(object sender, MouseButtonEventArgs e)
         {
             if (EnableHiragana == true & EnableKatakana == true)
@@ -194,7 +173,6 @@ namespace Kanaquizcs
             }
            
         }
-
         private void Katakana_Toggle(object sender, MouseButtonEventArgs e)
         {
             if (EnableKatakana == true & EnableHiragana == true)
@@ -209,7 +187,6 @@ namespace Kanaquizcs
                 EnableKatakana = true;
             }
         }
-
         private void TextBlock_QueryContinueDrag(object sender, QueryContinueDragEventArgs e)
         {
 
